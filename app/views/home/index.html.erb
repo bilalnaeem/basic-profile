@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="medium-6 columns">
+    <table>
+      <caption> User Details </caption>
+      <thead>
+      <tr>
+        <th width="500">Field Name</th>
+        <th width="500"> Value </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>First Name</td>
+        <td><%= current_user.first_name  %></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><%= current_user.last_name  %></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><%= current_user.address  %></td>
+      </tr>
+      <tr>
+        <td>Suite</td>
+        <td><%= current_user.suite  %></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= current_user.city  %></td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td><%= current_user.state  %></td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td><%= current_user.dob.strftime("%m/%d/%Y") if current_user.dob.present?   %></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td><%= current_user.gender  %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= current_user.email  %></td>
+      </tr>
+      <tr>
+        <td>Profile Picture</td>
+        <td><%= image_tag(current_user.avatar.url, size: '200x200') if current_user.avatar  %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

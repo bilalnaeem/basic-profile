@@ -1,0 +1,41 @@
+<div class="login">
+  <div class="row">
+    <div class="medium-6 columns">
+      <h2> Login </h2>
+    </div>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="row">
+      <div class="medium-6 columns">
+        <label> Email
+          <%= f.email_field :email, autofocus: true %>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="medium-6 columns">
+        <label> Password
+          <%= f.password_field :password, autocomplete: "off" %>
+        </label>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+    <div class="row">
+      <div class="medium-6 columns">
+        <label> <%= f.check_box :remember_me %>
+          Remember me
+        </label>
+      </div>
+    </div>
+    <% end -%>
+
+    <div class="row">
+      <div class="medium-6 columns">
+        <%= f.submit "Login", class: "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>

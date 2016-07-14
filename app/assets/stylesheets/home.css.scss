@@ -1,0 +1,27 @@
+/* backend validation */
+.signup .validation-error {
+   h2 {
+    font-size: 22px;
+    color: red;
+  }
+  ul li {
+    color: red;
+  }
+}
+table {
+  border-collapse: separate;
+}
+
+/* generic notice and warning messages */
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+span.required {
+  color: red;
+  font-size: 18px;
+}
